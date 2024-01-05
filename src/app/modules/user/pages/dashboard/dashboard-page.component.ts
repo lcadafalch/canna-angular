@@ -40,8 +40,26 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
   destroy$: Subject<boolean> = new Subject<boolean>();
   user: User | undefined;
   window: Window;
-  publicHeroes: Hero[];
+  // eslint-disable-next-line prettier/prettier
+  publicHeroes:any;
   trackHero: TrackByFunction<Hero>;
+  heroes_dummy = [
+    {
+      __typename: 'Hero',
+      id: 'fab9a93a-1b9a-4207-a35f-5283af383073',
+      realName: 'Entregas Nacex',
+      alterEgo: 'Salida a las 15:30 de hoy',
+      image:
+        'https://aspesanidadprivada.es/wp-content/uploads/2023/06/NACEX_bylogista_fondo_transparente-1-e1686051385620.png',
+    },
+    {
+      __typename: 'Hero',
+      id: 'bf4bc104-23eb-41a4-8ad0-b2ff916757ae',
+      realName: 'MBE Envíos Europa',
+      alterEgo: 'Salida a las 17:00',
+      image: 'https://www.mbe.it/img/share.jpg',
+    },
+  ];
 
   // eslint-disable-next-line max-params
   constructor(
@@ -95,7 +113,8 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
       .pipe(takeUntil(this.destroy$))
       .subscribe(heroes => {
         if (heroes) {
-          this.publicHeroes = heroes;
+          console.log(heroes);
+          this.publicHeroes = this.heroes_dummy;
           this.changeDetectorRef.detectChanges();
         }
       });
