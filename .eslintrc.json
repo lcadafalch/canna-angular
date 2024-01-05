@@ -9,7 +9,6 @@
         "createDefaultProgram": true
       },
       "plugins": [
-        "eslint-comments",
         "import",
         "optimize-regex",
         "promise",
@@ -18,9 +17,6 @@
         "rxjs-angular"
       ],
       "extends": [
-        "eslint:recommended",
-        "plugin:@typescript-eslint/recommended",
-        "plugin:eslint-comments/recommended",
         "plugin:import/warnings",
         "plugin:import/typescript",
         "plugin:optimize-regex/all",
