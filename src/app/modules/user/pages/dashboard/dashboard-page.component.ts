@@ -59,6 +59,14 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
       alterEgo: 'Salida a las 17:00',
       image: 'https://www.mbe.it/img/share.jpg',
     },
+    {
+      __typename: 'Hero',
+      id: 'bf4bc104-23eb-41a4-8ad0-b2ff916757ae',
+      realName: 'GLOVO Barcelona',
+      alterEgo: 'Salida a las 12:00 y 17:00',
+      image:
+        'https://images.ctfassets.net/sv4wepqk8nm7/4PCiPlfIpWfFGZV8Xj62qO/e1608c7c2129e517939ca091e1d83974/Glovo-101-guide-Deliverect-Logo.jpg?w=3040&h=1304',
+    },
   ];
 
   // eslint-disable-next-line max-params
